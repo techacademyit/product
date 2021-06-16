@@ -1,0 +1,14 @@
+{ "code" : 1002, "description" : "iphone 11", "category": "PHONE", "level" : "BASIC" } 
+{ "code" : 1003, "description" : "iphone 11 SE", "category": "PHONE",  "level" : "BASIC"  } 
+{ "code" : 1001, "description" : "iphone 11 MAX", "category": "PHONE",  "level" : "PREMIUM"  } 
+{ "code" : 1000, "description" : "iphone 8", "category": "PHONE" ,  "level" : "BASIC" } 
+
+{ "code" : 1004, "description" : "internet", "category": "SERVICE", "level" : "BASIC" } 
+{ "code" : 1010, "description" : "minute", "category": "SERVICE",  "level" : "BASIC"  } 
+{ "code" : 1011, "description" : "whatsapp", "category": "SERVICE",  "level" : "BASIC"  } 
+
+{ "code" : 10012, "description" : "internet unlimited", "category": "SERVICE", "level" : "PREMIUM" } 
+{ "code" : 10022, "description" : "whatsapp unlimited", "category": "SERVICE", "level" : "PREMIUM" } 
+{ "code" : 10021, "description" : "all-in-one", "category": "SERVICE", "level" : "PREMIUM" } 
+ 
+
