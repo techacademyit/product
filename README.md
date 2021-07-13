@@ -4,6 +4,6 @@
 
 # How to run in docker playground
 
-docker build --tag product .
-URL_CFG_SERVER="http://ip172-18-0-26-c3mulmvqf8u00084qm1g-9999.direct.labs.play-with-docker.com/" && export URL_CFG_SERVER
-docker run product
+docker build --tag product . <br/>
+URL_SERVER="<URL>" && export URL_SERVER <br/>
+docker run --env URL_CFG_SERVER="$URL_SERVER" -env PORT="8080" -p 8080:8080 product <br/>
