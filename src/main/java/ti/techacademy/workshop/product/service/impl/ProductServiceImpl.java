@@ -18,6 +18,7 @@ import org.springframework.stereotype.Service;
 
 import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 @Slf4j
 @Service
@@ -32,6 +33,18 @@ public class ProductServiceImpl implements ProductService{
         return new Jackson2JsonDecoder()
                 .decode(getData(resourceFile),ResolvableType.forClass(Product.class) , null, null)
                 .cast(Product.class)
+                .doOnNext( f -> log.info(f.toString()));
+
+    }
+
+    @Override
+    public Mono<Product> getProducts(Long code) {
+        return new Jackson2JsonDecoder()
+                .decode(getData(resourceFile),ResolvableType.forClass(Product.class) , null, null)
+                .cast(Product.class)
+                .filter(p -> code.equals(p.getCode()))
+                .take(1)
+                .single()
                 .doOnNext( f -> log.info(f.toString()));
 
     }

@@ -5,10 +5,14 @@ import ti.techacademy.workshop.product.model.Product;
 import ti.techacademy.workshop.product.model.ProductByCustomer;
 
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
 
 public interface ProductService{
 
     public Flux<Product> getProducts();
+
+    public Mono<Product> getProducts(Long code);
 
     public Flux<ProductByCustomer> getProductsByCustomer(Long code);
 
